@@ -1,85 +1,175 @@
+# Agentic Architecture Sprint
+## Official Event Blueprint
 
-
-# ODYSSEY: AGENTIC ARCHITECTURE SPRINT
-
-**TIME ALLOCATION:** 35 Minutes
-**SUBMISSION WINDOW:** 2 Minutes
-
-Welcome to Day Zero. You are here to demonstrate architectural thinking, AI command precision, and rapid debugging. 
+**Odyssey Club — AI & Data Science Department**
 
 ---
 
-## 🕒 THE TIMELINE
-* **00:00 - 35:00:** The Build Phase.
-* **35:00 - 37:00:** The Code Freeze & Submission Drill (Strict 2-minute window).
-* **37:00 - End:** The QA Crossfire. 
+A rapid-build, live-defense hackathon: teams vibe-code an application from a fresh problem statement, freeze code under a strict timer, and defend it under peer-driven QA *Crossfire* — with a hybrid AI + manual scoring system deciding the winner.
 
 ---
 
-## 🎯 THE PROBLEM STATEMENT: Agentic Task Orchestrator
+## Run of Show
 
-You must build a responsive, single-page dashboard that simulates a multi-agent task orchestration system. Your application must handle state transitions, real-time filtering, and simulated asynchronous processing.
+### Phase 1 · The Vision _(First 10 Minutes)_
 
-### 1. Core UI Requirements
-* **The Kanban Board:** Create a three-column layout: `Pending Tasks`, `Agents Processing`, and `Completed Logs`.
-* **Task Creation:** A text input area where users can type a new task and add it to the `Pending Tasks` column. 
-* **Agent Assignment (The Simulation):** 
-  * Every task in the `Pending Tasks` column must have a "Deploy Agent" button.
-  * Clicking this moves the task to `Agents Processing`.
-  * **The Catch:** Once in `Agents Processing`, the task must display a loading spinner/indicator for exactly **3 seconds**.
-  * After 3 seconds, it must automatically move to the `Completed Logs` column.
-* **Master Filter:** A dropdown or toggle that allows the user to filter tasks by `priority` (High, Medium, Low) across all columns simultaneously.
+**Owner:** Head of Department (HOD)
 
-### 2. Mandatory Initial Data (Mock State)
-Your application must load with this exact initial state. Do not start with an empty board.
-
-
+Opening address covering the club's roadmap, goals for the academic year, and the vision for the AI & DS department. Sets a formal, high-stakes tone for the event.
 
 ---
 
-## 🛠️ TECH STACK CONSTRAINTS
+### Phase 2 · Rules of Engagement _(5 Minutes)_
 
-* **Bring Your Own Stack:** You may use any language, framework, or UI library you are comfortable with (React, Python, Next.js, HTML/JS, etc.). Any AI IDE or LLM is permitted.
-* **The Golden Rule:** You must build this from scratch using your AI during the 35 minutes. You may not import personal templates, pre-existing projects, or code written prior to this event.
+**Owner:** 3rd-Year Coordinators
 
----
-
-## ⚔️ THE QA CROSSFIRE (Rules of Engagement)
-
-At minute 37:00, 2 members of your team ("Breakers") will rotate to a rival team's laptop.
-
-**What the Breakers will test:**
-
-1. **Crash Testing:** Can they break your UI by submitting empty tasks?
-2. **Race Conditions:** What happens if they click "Deploy Agent" on 5 tasks in less than a second? Does your 3-second timer break?
-3. **State Integrity:** Does switching the Master Filter while a task is in the `Processing` column crash the app or hide the task permanently?
-4. **Responsive Design:** Does the application break horizontally when resized to a mobile viewport?
-
-* **The Strike:** Every verified bug found by a Breaker costs your team **-5 Points**.
-* **The Defense:** If your team can prompt your AI to patch the bug and push it live within **2 minutes**, you recover half the penalty (**+2.5 points**).
+Officially drop the Problem Statement (via GitHub repo / README). Explain the rules of the 35-minute sprint. Teams may strategize internally — some members build the app while others study requirements ahead of the bug-hunting phase.
 
 ---
 
-## 🛑 CODE FREEZE & SUBMISSION PROTOCOL
+### Phase 3 · The Build Sprint _(35 Minutes)_
 
-At exactly **35:00**, all coding must stop. You have exactly 2 minutes to generate your audit files and submit them. **Failure to submit by 37:00 results in instant disqualification.**
+Timer starts. Teams use their chosen AI IDEs (Cursor, Windsurf, Copilot, etc.) to generate the application.
 
-### Step 1: Generate `manifest.md`
+**Enforcement:** Coordinators patrol the room to confirm teams are building from scratch, not reusing pre-existing code.
 
-Paste this exact prompt into your AI:
+---
 
-> `SYSTEM COMMAND: Code Freeze Audit. Analyze all the code in our current workspace. Generate a strict, honest report of our final application state. Format the output exactly with markdown headers: 1. FULLY FUNCTIONAL, 2. INCOMPLETE / BROKEN, 3. TECH STACK & DEPENDENCIES. WARNING TO AI: Do not lie. If you list a feature as functional and it crashes during QA, we suffer severe penalties.`
+### Phase 4 · Code Freeze & Submission _(Strict 2 Minutes)_
 
-### Step 2: Generate `prompts.md`
+When the timer hits `00:00`, coordinators announce **"Hands off keyboards."** The Google Form link is distributed. Teams have exactly 2 minutes to run the two mandatory AI prompts (see Section 3) to generate `functionality.md` and `chat_history.md`, then upload them.
 
-Paste this exact prompt into your AI immediately after the manifest is generated:
+*No team may begin QA testing until their form is submitted.*
 
-> `SYSTEM COMMAND: Prompt History Extraction. Scan this entire chat session from the first message. Output a single markdown block containing EVERY prompt I have given you, in chronological order. Format with "### Prompt [Number]" followed by my text. Do not include your responses or summarize.`
+---
 
-### Step 3: Submit
+### Phase 5 · The QA Crossfire _(15–20 Minutes)_
 
-Upload both `manifest.md` and `prompts.md` to the official Google Form provided by the Committee.
+**The Rotation:** Two members from each team ("Breakers") rotate to a rival team's laptop.
+
+**Rules for Breakers:**
+- May **only** interact with the frontend / UI — no touching or reading source code.
+- Actively try to break the app: empty submissions, rapid clicking, responsive-design checks.
+
+**Point System (monitored by coordinators):**
+- Bug found → Breaker raises hand → coordinator verifies on UI and logs it on paper.
+- **Strike:** defending team immediately loses **5 points**.
+- **Defense:** team gets 2–3 minutes to prompt their AI for a fix.
+- **Recovery:** successful fix within the limit → penalty reduced to **−2.5**. Failed fix → full **−5** stands.
+
+---
+
+### Phase 6 · Wrap-up & Feedback
+
+Event concludes. Coordinators distribute a feedback form on the sprint format while the back-end team preps submitted files for AI evaluation.
+
+---
+
+### Phase 7 · Result Validation & Official Announcement _(Post-Event)_
+
+**Calculation:** Over the weekend, the back-end committee finalizes scores by running submitted `functionality.md` and `chat_history.md` files through the master AI evaluation prompt, then subtracting the manual QA penalties recorded on paper.
+
+**HOD Clarification:** Finalized scorecards and winning team designations go to the HOD for official review and approval.
+
+**Announcement:** Odyssey Club staff-in-charge officially post final results and declare winners in the respective class groups by Monday or Tuesday.
+
+> **Why the delay?** Staging the announcement post-event keeps AI grading and QA penalty tallying accurate behind the scenes and protects the committee from on-the-floor disputes over the final score.
+
+---
+
+## The Final Evaluation System
+
+The winner is determined by combining two grading pillars:
+
+| Pillar | How It's Scored |
+|--------|-----------------|
+| **1. AI Automated Grading** (the baseline score) | The committee feeds submitted `functionality.md` and `chat_history.md` files into a master AI prompt, which evaluates prompting/token efficiency and how completely the team mapped problem-statement requirements into working features. |
+| **2. QA Crossfire** (the deductions) | The baseline score is reduced by manual bug penalties tracked on paper by coordinators: **−5** per unsolved bug, **−2.5** per solved bug. |
+
+### Final Score Formula
 
 ```
+Final Score = AI Baseline Score − Total QA Penalties
+```
+
+---
+
+## Mandatory Submission Prompts
+
+During the 2-minute Code Freeze, coordinators must instruct all teams to copy and paste these **exact** prompts into their AI IDE, in order.
+
+### Prompt 1 — The Functionality Manifest (`functionality.md`)
+
+Forces the AI to output a structured, machine-readable report of the codebase state.
+
+#### RUN THIS FIRST
 
 ```
+SYSTEM COMMAND: Comprehensive Codebase Audit for Automated Evaluation.
+
+You are acting as an internal state auditor. Analyze our entire current codebase. 
+Generate a detailed, highly structured markdown document named `functionality.md`. 
+This document will be evaluated by an AI judge, so technical precision is mandatory.
+
+Format the output using the following exact headers and detail levels:
+
+# TEAM FUNCTIONALITY MANIFEST
+
+## 1. CORE FEATURES STATUS
+* Bulleted list of exact features from the problem statement that are 100% functional 
+  and bug-free in the UI.
+* Detail the specific logic/state management powering each working feature.
+
+## 2. MISSING LOGIC & KNOWN BUGS
+* List features attempted but broken, throwing errors, or incomplete.
+* List core requirements from the problem statement that were not implemented.
+
+## 3. UI, STATE & EDGE CASES
+* Explain how frontend state is managed.
+* Describe handling of invalid user inputs / edge cases.
+* Confirm mobile-viewport responsiveness based on the CSS provided.
+
+## 4. DEPENDENCY TREE
+* List all frameworks, libraries, and external tools actually used in the codebase.
+
+WARNING: Do not hallucinate. Do not claim a feature works if the underlying logic 
+is missing. Falsified claims will result in heavy penalties during the live UI QA testing.
+```
+
+---
+
+### Prompt 2 — The Token & Strategy Audit (`chat_history.md`)
+
+Run immediately after the manifest — extracts both user inputs and AI outputs for token-efficiency and prompting-strategy evaluation.
+
+#### RUN THIS SECOND
+
+```
+SYSTEM COMMAND: Full Session Transcript Export.
+
+I need to export the entire interaction history of this current session so an 
+external auditor can evaluate our token efficiency, iteration speed, and prompting strategy.
+
+Generate a markdown document named `chat_history.md` that includes BOTH my exact inputs 
+(prompts) AND your complete outputs (code responses and text) in chronological order, 
+starting from the very first message.
+
+Format it exactly like this:
+
+### User Prompt [Number]
+[My exact input text]
+
+### AI Response [Number]
+[Your exact output text/code]
+
+CRITICAL REQUIREMENT: Do not summarize our conversation. Do not skip any iterations, 
+errors, or debugging loops. Output the raw data sequentially.
+```
+
+---
+
+## Submission form link
+https://forms.gle/zupUT1DMYNG2ZTPbA
+
+---
+
