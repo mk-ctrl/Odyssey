@@ -1,0 +1,8 @@
+CollaborateAI: A Dynamic Skill-Matching and Hybrid Recommendation Engine for Academic Projects and Hackathon Team Formation
+
+ Context & Background
+Collaborative learning, hackathons, and multi-disciplinary academic projects are core drivers of innovation and practical skill development in engineering institutions. In these environments, success depends heavily on assembling a balanced team with complementary technical capabilities (e.g., combining UI/UX design, backend development, database management, and machine learning).
+Currently, students form teams through ad-hoc, informal methods such as instant messaging groups, personal friend circles, or manual spreadsheets. These traditional approaches are highly inefficient, resulting in severely bottlenecked team dynamics, unmatched skill gaps, and the exclusion of talented students who lack established peer networks.
+
+The Problem Statement
+"How can we engineer a scalable full-stack web application that replaces manual, peer-dependent team formation with a dynamic, data-driven matching ecosystem, utilizing a recommendation pipeline to assemble highly compatible, multi-disciplinary student teams based on technical skills, project domain requirements, and personal learning goals?"
